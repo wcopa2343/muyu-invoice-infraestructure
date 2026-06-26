@@ -1,6 +1,6 @@
 # VPC resources will be defined here when network infrastructure is implemented.
 resource "aws_vpc" "muyu" {
-  cidr_block       = "10.10.0.0/16"
+  cidr_block = "10.10.0.0/16"
 
   tags = {
     Name = "Muyu-vpc"
@@ -62,7 +62,7 @@ resource "aws_internet_gateway" "gw" {
 # Elastic IP resources will be added here for NAT Gateway access to the internet.
 resource "aws_eip" "class2-bootcamp-nat-eip" {
   # instance = aws_instance.web.id
-  domain   = "vpc"
+  domain = "vpc"
   tags = {
     Name = "class2-bootcamp-nat-eip"
   }
