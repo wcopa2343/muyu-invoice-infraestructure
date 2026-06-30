@@ -1,5 +1,5 @@
 resource "aws_ecr_repository" "muyu" {
-  name                 =  var.name_prefix
+  name                 = var.name_prefix
   image_tag_mutability = "IMMUTABLE"
 
   image_scanning_configuration {
